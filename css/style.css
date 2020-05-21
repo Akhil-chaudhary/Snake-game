@@ -1,4 +1,309 @@
-body {
-    margin: 0px;
-    padding: 0px;
+html, body {
+    height: 100%;
+    background-color: rgb(36, 36, 36);
+    overflow: hidden;
   }
+  
+  .wrap {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button {
+    min-width: 300px;
+    min-height: 60px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color:rgb(36,36,36);
+    background: #4FD1C5;
+  background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    }
+  
+  button::before {
+  content: '';
+    border-radius: 1000px;
+    min-width: calc(300px + 12px);
+    min-height: calc(60px + 12px);
+    border: 6px solid #00FFCB;
+    box-shadow: 0 0 60px rgba(0,255,203,.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+  }
+  
+  .button:hover, .button:focus {
+    color: #313133;
+    transform: translateY(-6px);
+  }
+  
+  button:hover::before, button:focus::before {
+    opacity: 1;
+  }
+  
+  
+  button:hover::after, button:focus::after {
+    animation: none;
+    display: none;
+  }
+
+  
+
+  @font-face {
+    font-family: "Liberty";
+    src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/907368/liberty.otf");
+  }
+  body .text {
+    font-family: "Liberty";
+    font-weight: 100;
+    font-size: 7rem;
+    letter-spacing: -0.25em;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-flow: row;
+  }
+  body .text .letter {
+    color: #d9fdff;
+    text-shadow: 0 0 2rem #00f0ff;
+    display: inline-block;
+  }
+  body .text .letter.letter-2 {
+    -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+            transform: translate(-0.2rem, 1rem) rotate(10deg);
+    -webkit-animation: flicker 2s ease-in-out infinite alternate;
+            animation: flicker 2s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes flicker {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    5% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    5.5% {
+      opacity: 0;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    6% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    6.5% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    7% {
+      opacity: 0;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    8% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    50% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(13deg);
+              transform: translate(-0.2rem, 1rem) rotate(13deg);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+  }
+  
+  @keyframes flicker {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    5% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    5.5% {
+      opacity: 0;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    6% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    6.5% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    7% {
+      opacity: 0;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    8% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    50% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(13deg);
+              transform: translate(-0.2rem, 1rem) rotate(13deg);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+  }
+  
+
+  /* Credit section */
+  .card {
+    background-color: var(--background);
+    margin-top: 50px;
+    display: block;
+    width: 150px;
+    min-height: 90px;
+    cursor: pointer;
+    padding: 15px;
+    border: 3px solid var(--primary);
+    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green),
+          20px -20px 0 -3px var(--background), 20px -20px var(--yellow),
+          30px -30px 0 -3px var(--background), 30px -30px var(--orange),
+          40px -40px 0 -3px var(--background), 40px -40px var(--red);
+  }
+  
+  .card:hover {
+    animation: shadow-wave 1s ease infinite;
+  }
+  
+  
+  @keyframes shadow-wave {
+    0% {
+      border: 3px solid var(--primary);
+      box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green),
+        20px -20px 0 -3px var(--background), 20px -20px var(--yellow),
+        30px -30px 0 -3px var(--background), 30px -30px var(--orange),
+        40px -40px 0 -3px var(--background), 40px -40px var(--red);
+    }
+    20% {
+      border: 3px solid var(--red);
+      box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--primary),
+        20px -20px 0 -3px var(--background), 20px -20px var(--green),
+        30px -30px 0 -3px var(--background), 30px -30px var(--yellow),
+        40px -40px 0 -3px var(--background), 40px -40px var(--orange);
+    }
+    40% {
+      border: 3px solid var(--orange);
+      box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--red),
+        20px -20px 0 -3px var(--background), 20px -20px var(--primary),
+        30px -30px 0 -3px var(--background), 30px -30px var(--green),
+        40px -40px 0 -3px var(--background), 40px -40px var(--yellow);
+    }
+    60% {
+      border: 3px solid var(--yellow);
+      box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--orange),
+        20px -20px 0 -3px var(--background), 20px -20px var(--red),
+        30px -30px 0 -3px var(--background), 30px -30px var(--primary),
+        40px -40px 0 -3px var(--background), 40px -40px var(--green);
+    }
+    80% {
+      border: 3px solid var(--green);
+      box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--yellow),
+        20px -20px 0 -3px var(--background), 20px -20px var(--orange),
+        30px -30px 0 -3px var(--background), 30px -30px var(--red),
+        40px -40px 0 -3px var(--background), 40px -40px var(--primary);
+    }
+    100% {
+      border: 3px solid var(--primary);
+      box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green),
+        20px -20px 0 -3px var(--background), 20px -20px var(--yellow),
+        30px -30px 0 -3px var(--background), 30px -30px var(--orange),
+        40px -40px 0 -3px var(--background), 40px -40px var(--red);
+    }
+    
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  :root {
+    --primary: #22D2A0;
+    --secondary: rgb(36, 36, 36);
+    --background: rgb(36, 36, 36);
+    --green: #1FC11B;
+    --yellow: #FFD913;
+    --orange: #FF9C55;
+    --red: #FF5555;
+  } 
+  
+  .card p {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+  }
+  
+  .card h2 {
+    font-size: 14px;
+    font-family: "Archivo Black", "Archivo", sans-serif;
+    font-weight: normal;
+    color: aliceblue;
+  }
+
+  .profile{
+      height: 100px;
+      border-radius: 100%;
+  }
+
+  .img-snake{
+    transform: translateY(-80px);
+    height: 200px;
+  }
+
+  /* Mobile devices */
+@media only screen and (max-width: 480px) {
+    .text{
+        margin-left: 30px;
+    }
+    .first{
+        margin-top: 40px;
+    }
+    .img-snake{
+        transform: translateY(-40px);
+        height: 100px;
+    }
+}
