@@ -174,6 +174,7 @@ var canvas, ctx, context;
 var score = 0;
 var scores = [];
 window.onload = function () {
+  alert("This game works only on keyboard equipped devices.");
   canvas = document.getElementById("canvas");
   ctx = canvas.getContext("2d");
   document.addEventListener("keydown", keyDownEvent);
