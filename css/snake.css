@@ -11,8 +11,6 @@ html {
     display: flex;
     -webkit-box-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-            justify-content: center;
     background-color: rgb(36, 36, 36);
   }
   body:after {
@@ -29,7 +27,141 @@ html {
   }
   
   canvas {
-      
     box-shadow: 0 0 60px rgba(0,255,203,.64);
     border: 5px solid #4FD1C5;
+  }
+
+  .side-content{
+    width: 27%;
+    padding-right: 100px;
+    text-align: center;
+    transform: translateY(-200px);
+  }
+
+  
+  @font-face {
+    font-family: "Liberty";
+    src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/907368/liberty.otf");
+  }
+  body .text {
+    font-family: "Liberty";
+    font-weight: 100;
+    font-size: 3rem;
+    letter-spacing: -0.25em;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-flow: row;
+  }
+  body .text .letter {
+    color: #d9fdff;
+    text-shadow: 0 0 2rem #00f0ff;
+    display: inline-block;
+  }
+  body .text .letter.letter-2 {
+    -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+            transform: translate(-0.2rem, 1rem) rotate(10deg);
+    -webkit-animation: flicker 2s ease-in-out infinite alternate;
+            animation: flicker 2s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes flicker {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    5% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    5.5% {
+      opacity: 0;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    6% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    6.5% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    7% {
+      opacity: 0;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    8% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    50% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(13deg);
+              transform: translate(-0.2rem, 1rem) rotate(13deg);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+  }
+  
+  @keyframes flicker {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    5% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    5.5% {
+      opacity: 0;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    6% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    6.5% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    7% {
+      opacity: 0;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    8% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    50% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(13deg);
+              transform: translate(-0.2rem, 1rem) rotate(13deg);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translate(-0.2rem, 1rem) rotate(10deg);
+              transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+  }
+  
+  .value{
+    color: indianred;
+    text-shadow: 0 0 2rem indianred;
+    display: inline-block;
   }
