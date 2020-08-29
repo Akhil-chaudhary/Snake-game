@@ -1,4 +1,5 @@
 # Snake Game
+[Preview:eye:](https://akhil-chaudhary.github.io/Snake-game/)
 
 Simple Snake:snake: game with a gradient look 
 
