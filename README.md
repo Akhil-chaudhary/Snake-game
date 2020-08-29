@@ -29,9 +29,3 @@ One can easily deploy this webapp of hosting platforms like netify, firebase, he
 ## Author
 
 * **Akhil Chaudhary** 
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
